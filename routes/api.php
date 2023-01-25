@@ -24,3 +24,9 @@ Route::post('/upload-story', function (Request $request) {
   ]);
   return response()->json($story);
 });
+
+Route::get('/get-key', function() {
+  return response()->json([
+    'token' => env('GPT_KEY')
+  ]);
+});
