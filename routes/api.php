@@ -25,6 +25,14 @@ Route::post('/upload-story', function (Request $request) {
   return response()->json($story);
 });
 
+Route::get('/story/all', function (Request $request) {
+  $stories = Story::all();
+  return response()->json($stories);
+});
+
+Route::get('/story/{story}', function (Request $request, Story $story) {
+  return response()->json($story);
+});
 Route::get('/get-key', function() {
   return response()->json([
     'token' => env('GPT_KEY')
