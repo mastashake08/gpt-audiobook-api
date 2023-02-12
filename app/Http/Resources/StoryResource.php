@@ -21,7 +21,7 @@ class StoryResource extends JsonResource
           'ssml' => $this->story_data['ssml']
         ];
         return $data;
-      } catch (\Exception $e) {
+      } catch (\Illuminate\Validation\ValidationException $e) {
         return parent::toArray($request);
       }
 
