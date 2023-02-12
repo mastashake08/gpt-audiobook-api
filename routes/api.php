@@ -29,7 +29,7 @@ Route::post('/upload-story', function (Request $request) {
 
 Route::get('/story/all', function (Request $request) {
   $stories = Story::all();
-  return response()->json(StoryResource::collect($stories));
+  return response()->json(StoryResource::collection($stories));
 });
 
 Route::get('/story/{story}', function (Request $request, Story $story) {
