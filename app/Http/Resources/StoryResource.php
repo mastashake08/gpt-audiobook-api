@@ -14,10 +14,16 @@ class StoryResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+      try {
+        $data = [
           'title' => $this->story_data['title'],
           'text' => $this->story_data['text'],
           'ssml' => $this->story_data['ssml']
-        ];
+        ]
+        return $data;
+      } catch ($e) {
+        return parent::toArray($request);
+      }
+
     }
 }
