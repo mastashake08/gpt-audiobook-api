@@ -33,7 +33,7 @@ Route::get('/story/all', function (Request $request) {
 });
 
 Route::get('/story/{story}', function (Request $request, Story $story) {
-  return response()->json($story);
+  return response()->json(new StoryResource($story));
 });
 Route::get('/get-key', function() {
   return response()->json([
