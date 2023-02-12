@@ -14,11 +14,6 @@ class StoryResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
-          'title' => $this->title,
-          'text' => $this->text,
-          'ssml' => $this->ssml,
-          'img' => $this->img
-        ];
+        return parent::toArray($request);
     }
 }
