@@ -19,7 +19,7 @@ class StoryResource extends JsonResource
           'title' => $this->story_data['title'],
           'text' => $this->story_data['text'],
           'ssml' => $this->story_data['ssml']
-        ]
+        ];
         return $data;
       } catch ($e) {
         return parent::toArray($request);
