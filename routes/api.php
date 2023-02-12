@@ -48,7 +48,6 @@ Route::post('/generate-story', function (Request $request) {
     'temperature' => 1,
     'max_tokens' => 2048
  ]);
- var_dump($result['choices'][0]['text']);
  $story = Story::Create([
    'story_data' => $result['choices'][0]['text']
  ]);
