@@ -15,10 +15,10 @@ class StoryResource extends JsonResource
     public function toArray($request)
     {
         return [
-          'title' => $this->story_data['title'],
-          'text' => $this->story_data['text'],
-          'ssml' => $this->story_data['ssml'],
-          'img' => $this->story_data['img']
+          'title' => $this->story_data->title,
+          'text' => $this->story_data->text,
+          'ssml' => $this->story_data->ssml,
+          'img' => $this->story_data->img
         ];
     }
 }
